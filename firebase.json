@@ -1,35 +1,16 @@
 {
   "hosting": {
-    "public": ".",
+    "public": "public",
     "ignore": [
       "firebase.json",
-      ".firebase",
-      ".github",
-      ".git",
-      ".gitignore",
-      "README.md"
+      "**/.*",
+      "**/node_modules/**"
     ],
-    "headers": [
+    "rewrites": [
       {
-        "source": "**/*.@(jpg|jpeg|gif|png|svg|webp)",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "max-age=31536000, immutable"
-          }
-        ]
-      },
-      {
-        "source": "**/*.@(css|js)",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "max-age=86400"
-          }
-        ]
+        "source": "**",
+        "destination": "/index.html"
       }
-    ],
-    "cleanUrls": true,
-    "trailingSlash": false
+    ]
   }
 }

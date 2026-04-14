@@ -329,10 +329,10 @@ a:hover {
 }
 
 .welcome-image img {
-  border-radius: 300px 300px 300px 300px;
+  border-radius: 20px;
   object-fit: cover;
   width: 100%;
-  max-width: 450px;
+  height: 500px;
   margin: 0 auto;
 }
 

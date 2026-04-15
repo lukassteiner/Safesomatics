@@ -362,33 +362,30 @@ a:hover {
 .what-is-card {
   text-align: center;
   padding: 2.5rem 2rem;
-  background: rgba(255, 251, 245, 0.5);
+  background: rgba(255, 251, 245, 0.1);
   border-radius: 20px;
-  border: 1px solid rgba(115, 120, 85, 0.1);
+  border: 1px solid rgba(255, 251, 245, 0.15);
 }
 
 .what-is-card h3 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  color: #737855;
+  color: #f3f9d2;
 }
 
 .what-is-card p {
   font-size: 0.95rem;
   line-height: 1.7;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 .what-is-description {
   text-align: center;
   max-width: 800px;
-  margin: 3rem auto 0;
+  margin: 0 auto;
   font-size: 1.05rem;
   line-height: 1.8;
   padding: 2rem;
-  background: rgba(115, 120, 85, 0.05);
-  border-radius: 20px;
-  border-left: 3px solid #737855;
 }
 
 /* ============================================
@@ -496,8 +493,8 @@ a:hover {
   text-align: center;
   padding: 2.5rem 1.5rem;
   border-radius: 20px;
-  background: rgba(255, 251, 245, 0.1);
-  border: 1px solid rgba(255, 251, 245, 0.15);
+  background: rgba(115, 120, 85, 0.05);
+  border: 1px solid rgba(115, 120, 85, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -508,13 +505,13 @@ a:hover {
 .pillar-card h4 {
   font-size: 1.3rem;
   margin-bottom: 1rem;
-  color: #f3f9d2;
+  color: #737855;
 }
 
 .pillar-card p {
   font-size: 0.95rem;
   line-height: 1.7;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 /* ============================================

@@ -148,24 +148,33 @@ a:hover {
    ============================================ */
 .hero {
   padding-top: 48px;
-  background-color: #737855;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #fffbf5;
   position: relative;
-  min-height: 100vh;
+  overflow: hidden;
 }
 
 .hero-bg-shape {
-  display: none;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #737855;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1512px;
+  margin: 0 auto;
+  padding: 5.5% 0;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-image-wrapper {
   position: relative;
-  max-width: 900px;
-  width: 65%;
-  margin: 4rem auto;
-  z-index: 1;
+  width: 62.7%;
 }
 
 .hero-image {
@@ -176,25 +185,25 @@ a:hover {
 
 .hero-overlay {
   position: absolute;
-  bottom: 3rem;
+  bottom: 0;
   left: 0;
-  padding: 0 2rem;
+  padding: 0 0 2rem 0;
 }
 
 .hero-overlay h1 {
-  font-size: 3rem;
+  font-size: 2.65rem;
   font-weight: 700;
   color: #f3f9d2;
-  line-height: 1.1;
-  margin-bottom: 0.25rem;
+  line-height: 1.38;
+  margin-bottom: 0;
 }
 
 .hero-subtitle {
   font-family: 'Playfair Display', serif;
-  font-size: 1rem;
+  font-size: 1.06rem;
   font-weight: 400;
   color: #fffbf5;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.056em;
 }
 
 /* ============================================
@@ -323,29 +332,39 @@ a:hover {
    ============================================ */
 .welcome {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  min-height: 600px;
+  grid-template-columns: 45.2% 1fr;
+  gap: 0;
+  align-items: start;
+  max-width: 1512px;
+  margin: 0 auto;
+}
+
+.welcome-image {
+  padding-left: 4.8%;
 }
 
 .welcome-image img {
   object-fit: cover;
   width: 100%;
-  height: 550px;
+  height: 93%;
+  aspect-ratio: 683 / 670;
+}
+
+.welcome-content {
+  padding: 4.7% 5% 0 8%;
 }
 
 .welcome-content h2 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 700;
+  letter-spacing: 0;
+  font-weight: 400;
 }
 
 .welcome-content p {
-  font-size: 1.1rem;
-  line-height: 1.9;
+  font-size: 1.45rem;
+  line-height: 1.55;
   margin-bottom: 1rem;
 }
 
@@ -885,7 +904,19 @@ a:hover {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .welcome,
+  .welcome {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .welcome-image {
+    padding-left: 0;
+  }
+
+  .welcome-content {
+    padding: 2rem 5%;
+  }
+
   .split-section,
   .about-grid {
     grid-template-columns: 1fr;
@@ -894,10 +925,6 @@ a:hover {
 
   .split-section.reverse {
     direction: ltr;
-  }
-
-  .welcome-image {
-    order: -1;
   }
 
   .hero-overlay h1 {
@@ -939,27 +966,28 @@ a:hover {
     display: flex;
   }
 
-  .hero {
-    min-height: auto;
-    padding-top: 48px;
-  }
-
   .hero-image-wrapper {
     width: 90%;
-    margin: 2rem auto;
+  }
+
+  .hero-inner {
+    padding: 3% 0;
   }
 
   .hero-overlay h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-overlay {
-    bottom: 1rem;
-    padding: 0 1rem;
+    font-size: 1.5rem;
   }
 
   .hero-subtitle {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  .welcome-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .welcome-content p {
+    font-size: 1.1rem;
   }
 
   .section {

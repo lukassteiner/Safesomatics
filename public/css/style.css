@@ -68,36 +68,22 @@ a:hover {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: rgba(255, 251, 245, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(115, 120, 85, 0.1);
+  background-color: #737855;
+  border-bottom: 1px solid rgba(255, 251, 245, 0.1);
   transition: box-shadow 0.3s ease;
 }
 
 .nav.scrolled {
-  box-shadow: 0 2px 20px rgba(93, 73, 84, 0.08);
+  box-shadow: 0 2px 20px rgba(93, 73, 84, 0.15);
 }
 
 .nav-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0.75rem 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-}
-
-.nav-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #5d4954;
-  letter-spacing: 0.02em;
-}
-
-.nav-logo span {
-  color: #737855;
 }
 
 .nav-links {
@@ -108,11 +94,11 @@ a:hover {
 }
 
 .nav-links a {
-  font-size: 0.9rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
   font-weight: 400;
-  color: #5d4954;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  color: #fffbf5;
+  letter-spacing: 0.02em;
   position: relative;
   padding-bottom: 2px;
 }
@@ -124,7 +110,7 @@ a:hover {
   left: 0;
   width: 0;
   height: 1px;
-  background-color: #737855;
+  background-color: #fffbf5;
   transition: width 0.3s ease;
 }
 
@@ -134,7 +120,8 @@ a:hover {
 }
 
 .nav-links a.active {
-  color: #737855;
+  color: #fffbf5;
+  font-weight: 600;
 }
 
 .nav-toggle {
@@ -151,7 +138,7 @@ a:hover {
   display: block;
   width: 24px;
   height: 2px;
-  background-color: #5d4954;
+  background-color: #fffbf5;
   transition: all 0.3s ease;
 }
 
@@ -159,60 +146,45 @@ a:hover {
    Hero Section
    ============================================ */
 .hero {
-  min-height: 100vh;
+  padding: 5rem 2rem 3rem;
+  background-color: #737855;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 8rem 2rem 4rem;
-  position: relative;
-  overflow: hidden;
-  background-color: #fffbf5;
 }
 
-.hero-bg {
+.hero-image-wrapper {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
+
+.hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('../images/066b9617bab4fffd7803dbf2ef9ac139.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.15;
+  bottom: 2rem;
+  left: 2rem;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
+.hero-overlay h1 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #fffbf5;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
 }
 
 .hero-subtitle {
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 0.85rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-style: italic;
   font-weight: 400;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: #737855;
-  margin-bottom: 1.5rem;
-}
-
-.hero h1 {
-  font-size: 4rem;
-  font-weight: 300;
-  color: #5d4954;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.02em;
-}
-
-.hero-description {
-  font-size: 1.1rem;
-  color: #5d4954;
-  opacity: 0.8;
-  max-width: 550px;
-  margin: 0 auto 2.5rem;
-  line-height: 1.8;
+  color: #f3f9d2;
 }
 
 /* ============================================
@@ -848,11 +820,11 @@ a:hover {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: rgba(255, 251, 245, 0.98);
+    background-color: rgba(115, 120, 85, 0.98);
     flex-direction: column;
     padding: 2rem;
     gap: 1.5rem;
-    border-bottom: 1px solid rgba(115, 120, 85, 0.1);
+    border-bottom: 1px solid rgba(255, 251, 245, 0.1);
   }
 
   .nav-links.open {
@@ -864,12 +836,20 @@ a:hover {
   }
 
   .hero {
-    min-height: 80vh;
-    padding: 7rem 1.5rem 3rem;
+    padding: 4.5rem 1rem 2rem;
   }
 
-  .hero h1 {
-    font-size: 2.5rem;
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .hero-overlay {
+    bottom: 1rem;
+    left: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
   }
 
   .section {
@@ -918,8 +898,8 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2rem;
+  .hero-overlay h1 {
+    font-size: 1.6rem;
   }
 
   .btn-group {

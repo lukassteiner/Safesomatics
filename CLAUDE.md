@@ -47,7 +47,7 @@ Transparent variants via `rgba()` of these same colors are acceptable for border
 
 ## CSS Conventions
 
-- **Fonts**: Cormorant Garamond (headings) and Nunito Sans (body) loaded from Google Fonts
+- **Fonts**: Playfair Display (weights 400 and 700) for all text (headings and body), loaded from Google Fonts
 - **Section backgrounds** alternate using utility classes: `.section-cream`, `.section-olive`, `.section-plum`, `.section-light-green`
 - **Scroll animations**: Add class `fade-in` to any element to get a fade-up-on-scroll effect (handled by IntersectionObserver in `main.js`)
 - **Responsive breakpoints**: 1024px (tablet), 768px (mobile), 480px (small mobile)

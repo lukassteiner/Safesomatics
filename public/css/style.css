@@ -185,9 +185,10 @@ a:hover {
 
 .hero-overlay {
   position: absolute;
-  top: 44%;
+  top: 20%;
   left: 0;
   padding: 0;
+  padding-left: 41px;
 }
 
 .hero-overlay h1 {
